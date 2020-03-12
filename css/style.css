@@ -33,6 +33,11 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 20px;
+}
+
+.logo {
+    padding: 10px 30px 20px 0;
 }
 
 .first-nav li {
@@ -41,9 +46,95 @@ a {
     padding-bottom: 10px;
 }
 
+.first-nav li a {
+    font-size: 13px;
+}
+
 .first-nav li img {
     width: 13%;
     margin-right: 10px;
+}
+
+
+.playlist {
+    margin-top: 20px;
+}
+
+.playlist h5  {
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.playlist h6 {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.4);
+    padding: 25px 0;
+
+}
+
+.menu-list {
+    height: 160px;
+    overflow-y: scroll;
+}
+
+.install {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 3px 0 10px 0;
+}
+
+.install img {
+    height: 15px;
+    width: 15px;
+    margin-right: 10px;
+}
+
+.install span {
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.profile span {
+    font-size: 13px;
+    font-weight: 700;
+    color: white;
+}
+
+.profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.profile img {
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+    background: rgb(157, 158, 158);
+    border-radius: 50%;
+    border: 1px solid white;
+    color: white;
+}
+
+
+ .playlist .menu-list li {
+    padding: 10px 0;
+    font-size: 13px;
+}
+
+#plus {
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.4);
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 20px;
 }
 
 .playlist span, .profile span {
@@ -89,7 +180,9 @@ a {
     font-weight: 400;
     border-radius: 40px;
     font-size: 12px;
+    cursor: pointer;
 }
+
 
 .center-nav ul {
     display: flex;
@@ -164,8 +257,135 @@ a {
 }
 
 .player-box {
-    width: 99%;
+    width: 98%;
     margin: auto;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.track {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.track img {
+    width: 50px;
+    height: 50px;
+}
+
+.track-info {
+    margin-left: 10px;
+}
+
+.track-info h5 {
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.track-info h6 {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.track-overview {
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.left-toggles {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.4);
+    margin-right: 50px;
+}
+
+.track-length {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.controller {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.buttons i {
+    color: white;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+#play {
+    font-size: 32px;
+}
+
+.track-length span {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0 20px;
+}
+
+.bar {
+    width: 300px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+}
+
+.current-time {
+    height: 100%;
+    width: 20%;
+    position: relative;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+}
+
+.volume {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.volume i {
+    color: white;
+    font-size: 14px;
+}
+
+
+.volume-bar {
+    width: 50%;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+}
+
+.current-volume {
+    width: 10%;
+    height: 100%;
+    position: relative;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
 }

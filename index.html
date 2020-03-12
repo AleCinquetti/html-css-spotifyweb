@@ -23,7 +23,7 @@
 
                 <div class="first-nav">
                     <ul>
-                        <li>
+                        <li id="current-page">
                             <img src="img/home.svg" alt="home">
                             <a href="">Home</a>
                         </li>
@@ -39,9 +39,9 @@
                 </div>
 
                 <div class="playlist">
-                    <h5>PLAYIST</h5>
-                    <h6>Crea playlist</h6>
-                    <ul>
+                    <h5>PLAYLIST</h5>
+                    <h6><span id="plus">+</span>Crea playlist</h6>
+                    <ul class="menu-list">
                         <li><a href="">Nome Playlist</a></li>
                         <li><a href="">Nome Playlist</a></li>
                         <li><a href="">Nome Playlist</a></li>
@@ -50,10 +50,15 @@
                         <li><a href="">Nome Playlist</a></li>
                         <li><a href="">Nome Playlist</a></li>
                     </ul>
-                    <span>Installa app</span>
+                    <div class="install">
+                        <img src="img/download.svg" alt="">
+                        <span>Installa app</span>
+                    </div>
+
                 </div>
 
                 <div class="profile">
+                    <img src="img/profile.svg" alt="">
                     <span>John Doe</span>
                 </div>
             </nav>
@@ -153,7 +158,46 @@
     </main>
     <footer>
         <div class="player">
-            <div class="player-box"></div>
+            <div class="player-box">
+                <div class="track">
+                    <div class="track-overview">
+                        <img src="img/sinister.jpeg" alt="">
+                        <div class="track-info">
+                            <h5>Sinister</h5>
+                            <h6>Title Track</h6>
+                        </div>
+                    </div>
+                    <div class="left-toggles">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-folder"></i>
+                    </div>
+                </div>
+                <div class="controller">
+                    <div class="buttons">
+                        <i class="fas fa-random"></i>
+                        <i class="fas fa-step-backward"></i>
+                        <i id="play" class="far fa-play-circle"></i>
+                        <i class="fas fa-step-forward"></i>
+                        <i class="fas fa-redo-alt"></i>
+                    </div>
+                    <div class="track-length">
+                        <span>0:25</span>
+                        <div class="bar">
+                            <div class="current-time"></div>
+                        </div>
+                        <span>4.35</span>
+                    </div>
+                </div>
+                <div class="volume">
+                    <i class="fas fa-list"></i>
+                    <i class="fas fa-desktop"></i>
+                    <i class="fas fa-volume-up"></i>
+
+                    <div class="volume-bar">
+                        <div class="current-volume"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
