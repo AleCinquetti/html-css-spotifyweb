@@ -16,7 +16,7 @@ a {
 
 .container {
     width: 100%;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 90px);
 }
 
 .container::after {
@@ -33,17 +33,17 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px;
 }
 
 .logo {
-    padding: 10px 30px 20px 0;
+    padding: 20px 30px 20px 20px;
 }
 
 .first-nav li {
     display: flex;
     align-items: center;
     padding-bottom: 10px;
+    padding-left: 20px;
 }
 
 .first-nav li a {
@@ -55,9 +55,18 @@ a {
     margin-right: 10px;
 }
 
+.first-nav li a:hover, .first-nav li img:hover {
+    color: white;
+}
+
+#current-page {
+    border-left: 2px solid greenyellow;
+}
+
 
 .playlist {
     margin-top: 20px;
+    padding: 0 20px;
 }
 
 .playlist h5  {
@@ -71,12 +80,28 @@ a {
     font-weight: 400;
     color: rgba(255, 255, 255, 0.4);
     padding: 25px 0;
+    cursor: pointer;
+}
 
+.playlist h6:hover {
+    color: white;
+}
+
+#plus:hover {
+    background: white;
 }
 
 .menu-list {
     height: 160px;
-    overflow-y: scroll;
+    overflow-y: hidden;
+}
+
+.menu-list:hover {
+    overflow-y: auto;
+}
+
+.menu-list li a:hover {
+    color: white;
 }
 
 .install {
@@ -84,7 +109,8 @@ a {
     justify-content: flex-start;
     align-items: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-    padding: 3px 0 10px 0;
+    padding: 3px 10px 10px 0;
+    cursor: pointer;
 }
 
 .install img {
@@ -109,7 +135,7 @@ a {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 10px 0;
+    padding: 10px 0 10px 20px;
 }
 
 .profile img {
@@ -152,10 +178,14 @@ a {
     color: rgba(255, 255, 255, 0.4);
 }
 
+
 .player {
     width: 100%;
-    height: 100px;
+    height: 90px;
     background: #282828;
+    position: fixed;
+    bottom: 0;
+    z-index: 3;
 }
 
 .upgrade {
@@ -183,6 +213,9 @@ a {
     cursor: pointer;
 }
 
+.upgrade h3:hover {
+  transform: scale(1.2,1.2);
+}
 
 .center-nav ul {
     display: flex;
@@ -196,9 +229,18 @@ a {
 
 .center-nav ul li a {
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 13px;
 }
 
+.center-nav ul li a:hover {
+    color: white;
+}
+/*
+#underlined{
+    width: 35%;
+    height: 2px;
+    background: greenyellow;
+} */
 
 .recent {
     padding: 10px 0;
@@ -235,6 +277,30 @@ a {
     font-weight: 300;
 }
 
+/* .layover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.layover span {
+  font-size: 50px;
+  display: none;
+}
+
+.cover-image:hover .layover span {
+    display: block;
+}
+
+.image:hover .layover {
+    background-color: rgba(0, 0, 0, 0.5);
+} */
+
 
 .covers {
     display: flex;
@@ -249,7 +315,6 @@ a {
 
 .cover-box img {
     width: 100%;
-
 }
 
 .cover-box .circle {

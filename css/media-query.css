@@ -1,0 +1,155 @@
+/* XS */
+@media screen and (max-width: 768px) {
+    .left-nav {
+        width: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .small-logo {
+        display: block;
+        padding: 10px;
+    }
+
+    .first-nav li a {
+        display: none;
+    }
+
+    .first-nav li img {
+        width: 80%;
+    }
+
+    .playlist {
+        display: none;
+    }
+
+    .install span {
+        display: none;
+    }
+
+    .profile span {
+        display: none
+    }
+
+    .main-content {
+        width: calc(100% - 60px);
+    }
+
+    .upgrade {
+        width: calc(100% - 60px);
+        height: 100px;
+        position: fixed;
+        top: 0;
+        left: 60px;
+    }
+    }
+
+    .center-nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .recent {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .covers {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .cover-box {
+        text-align: center;
+        width: calc(100%/2 - 15px);
+        margin-right: 15px;
+    }
+
+}
+
+
+
+
+
+
+/* SM */
+@media screen and (min-width:769px) and (max-width:992px) {
+
+    .small-logo {
+        display: none;
+    }
+
+    .center-nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .recent {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .cover-box {
+        text-align: center;
+        width: calc(100%/4 - 15px);
+        margin-right: 15px;
+    }
+}
+
+
+
+
+
+/* MD */
+@media screen and (min-width:993px) and (max-width:1199px) {
+
+    .small-logo {
+        display: none;
+    }
+
+    .center-nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .recent {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    .cover-box {
+        text-align: center;
+        width: calc(100%/4 - 15px);
+        margin-right: 15px;
+    }
+
+}
+
+
+@media screen and (min-width:1199px) {
+    .small-logo {
+        display: none;
+    }
+
+    .cover-box {
+        text-align: center;
+        width: calc(100%/6 - 15px);
+        margin-right: 15px;
+    }
+
+}
