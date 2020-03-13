@@ -1,6 +1,7 @@
+/* REGOLE GENERALI */
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
@@ -14,20 +15,23 @@ a {
     color: rgba(255, 255, 255, 0.4);
 }
 
-.container {
-    width: 100%;
+/* VIEWPORT SOPRA IL PLAYER */
+.main-container {
+    width: 100vw;
     height: calc(100vh - 90px);
 }
 
-.container::after {
+/* CLEAR */
+.main-container::after {
     content: "";
     display: table;
     clear: both;
 }
 
-.left-nav {
-    width: 230px;
+/* MENU A SINISTRA */
+.left-column {
     height: 100%;
+    width: 230px;
     float: left;
     background: black;
     display: flex;
@@ -35,38 +39,54 @@ a {
     justify-content: space-between;
 }
 
-.logo {
-    padding: 20px 30px 20px 20px;
+
+/* LOGO + PRIMA NAV + PLAYLIST */
+.logo-first-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
 }
 
-.first-nav li {
+.logo {
+    padding: 20px 30px 10px 20px;
+}
+
+/* MENU CON 3 IMMAGINI */
+.first-menu li {
     display: flex;
     align-items: center;
     padding-bottom: 10px;
     padding-left: 20px;
 }
 
-.first-nav li a {
+.first-menu li a {
     font-size: 13px;
 }
 
-.first-nav li img {
+.first-menu li img {
     width: 13%;
     margin-right: 10px;
 }
 
-.first-nav li a:hover, .first-nav li img:hover {
+.first-menu li a:hover, .first-menu li img:hover {
     color: white;
 }
 
 #current-page {
     border-left: 2px solid greenyellow;
+    padding-left: 18px;
 }
 
 
+/* PLAYLIST */
 .playlist {
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 60%;
 }
 
 .playlist h5  {
@@ -79,7 +99,7 @@ a {
     font-size: 16px;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.4);
-    padding: 25px 0;
+    padding: 15px 0;
     cursor: pointer;
 }
 
@@ -87,13 +107,27 @@ a {
     color: white;
 }
 
+#plus {
+    padding: 4px 8px;
+    background: rgba(255, 255, 255, 0.4);
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
 #plus:hover {
     background: white;
 }
 
 .menu-list {
-    height: 160px;
-    overflow-y: hidden;
+    height: 70%;
+    overflow-y: scroll;
+}
+
+.playlist .menu-list li {
+    padding: 10px 0;
+    font-size: 13px;
 }
 
 .menu-list:hover {
@@ -104,12 +138,18 @@ a {
     color: white;
 }
 
+
+/* INSTALLA */
+.install-profile {
+    padding-top: 10px;
+}
+
 .install {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-    padding: 3px 10px 10px 0;
+    padding: 3px 20px 10px 20px;
     cursor: pointer;
 }
 
@@ -125,12 +165,8 @@ a {
     color: rgba(255, 255, 255, 0.4);
 }
 
-.profile span {
-    font-size: 13px;
-    font-weight: 700;
-    color: white;
-}
 
+/* PROFILO */
 .profile {
     display: flex;
     justify-content: flex-start;
@@ -148,46 +184,25 @@ a {
     color: white;
 }
 
-
- .playlist .menu-list li {
-    padding: 10px 0;
+.profile span {
     font-size: 13px;
-}
-
-#plus {
-    padding: 10px 15px;
-    background: rgba(255, 255, 255, 0.4);
-    color: black;
-    font-size: 18px;
-    font-weight: 600;
-    margin-right: 20px;
-}
-
-.playlist span, .profile span {
+    font-weight: 700;
     color: white;
 }
 
+/* MAIN CONTENT (DESTRA) */
 .main-content {
+    height: 100%;
     width: calc(100% - 230px);
     float: left;
-    height: 100%;
-    background: green;
+    background: #141922;
     overflow-y: auto;
     background: #141922;
     padding-top: 100px;
     color: rgba(255, 255, 255, 0.4);
 }
 
-
-.player {
-    width: 100%;
-    height: 90px;
-    background: #282828;
-    position: fixed;
-    bottom: 0;
-    z-index: 3;
-}
-
+/* FIXED-BAR */
 .upgrade {
     width: calc(100% - 230px);
     height: 100px;
@@ -217,6 +232,8 @@ a {
   transform: scale(1.2,1.2);
 }
 
+
+/* NAV CENTRALE */
 .center-nav ul {
     display: flex;
     justify-content: center;
@@ -235,34 +252,44 @@ a {
 .center-nav ul li a:hover {
     color: white;
 }
-/*
-#underlined{
-    width: 35%;
-    height: 2px;
-    background: greenyellow;
-} */
 
-.recent {
-    padding: 10px 0;
-    width: 96%;
-    margin: auto;
+
+/* RECENT */
+.recently-played {
+    margin-left: 15px;
 }
 
-.recent h3 {
+#recent-played {
+    margin-bottom: 25px;
+}
+
+.recently-played h3 {
     color: white;
     font-size: 24px;
     font-weight: 700;
     margin: 40px 0 10px 0;
 }
 
-.recent #recent-played {
-    margin-bottom: 25px;
-}
-
-.recent h6 {
+.recently-played h6 {
     font-size: 12px;
     font-weight: 300;
     margin-bottom: 25px;
+}
+
+.covers {
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.cover-box {
+    text-align: center;
+    width: calc(100%/6 - 15px);
+    margin-right: 15px;
+}
+
+.cover-box img {
+    width: 100%;
 }
 
 .cover-box h5 {
@@ -277,65 +304,44 @@ a {
     font-weight: 300;
 }
 
-/* .layover {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.layover span {
-  font-size: 50px;
-  display: none;
-}
-
-.cover-image:hover .layover span {
-    display: block;
-}
-
-.image:hover .layover {
-    background-color: rgba(0, 0, 0, 0.5);
-} */
-
-
-.covers {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.cover-box {
-    text-align: center;
-    width: calc(100%/6 - 15px);
-    margin-right: 15px;
-}
-
-.cover-box img {
-    width: 100%;
-}
-
-.cover-box .circle {
+.circle img {
     border-radius: 50%;
 }
 
+/* FOOTER (PLAYER) */
+.player {
+    width: 100%;
+    height: 90px;
+    background: #282828;
+    position: fixed;
+    bottom: 0;
+    z-index: 3;
+}
+
+/* CONTENITORE */
 .player-box {
     width: 98%;
     margin: auto;
-    /* border: 1px solid white; */
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+/* PARTE SINISTRA PLAYER */
 .track {
     width: 20%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+/* IMG TRACK E INFO */
+.track-overview {
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .track img {
@@ -359,13 +365,7 @@ a {
     font-weight: 300;
 }
 
-.track-overview {
-    width: 60%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
+/* TOGGLES */
 .left-toggles {
     width: 20%;
     display: flex;
@@ -375,13 +375,8 @@ a {
     margin-right: 50px;
 }
 
-.track-length {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-}
-
+/* PARTE CENTRALE PLAYER (CONTROLLER) */
 .controller {
     width: 60%;
     display: flex;
@@ -389,6 +384,7 @@ a {
     align-items: center;
 }
 
+/* PULSANTI */
 .buttons {
     padding: 10px;
     display: flex;
@@ -403,6 +399,13 @@ a {
 
 #play {
     font-size: 32px;
+}
+
+/* TEMPO CANZONE */
+.track-length {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .track-length span {
@@ -427,6 +430,7 @@ a {
     border-radius: 20px;
 }
 
+/* PULSANTIERA VOLUME */
 .volume {
     width: 20%;
     display: flex;
@@ -438,7 +442,6 @@ a {
     color: white;
     font-size: 14px;
 }
-
 
 .volume-bar {
     width: 50%;
