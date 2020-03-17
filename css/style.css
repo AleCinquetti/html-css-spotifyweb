@@ -312,6 +312,32 @@ a {
     border-radius: 50%;
 }
 
+.cover-wrap {
+  position:relative;
+}
+
+.cover-wrap i {
+  font-size: 60px;
+  line-height: 170px;
+}
+
+.cover-wrap:hover .overlay {
+  display: block;
+}
+
+.circle .cover-wrap:hover .overlay {
+  border-radius: 50%;
+}
+
+.overlay {
+  display: none;
+  top:0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 /* FOOTER (PLAYER) */
 .player {
     width: 100%;
